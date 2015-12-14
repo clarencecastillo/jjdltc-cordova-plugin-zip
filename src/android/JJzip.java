@@ -126,7 +126,7 @@ public class JJzip extends CordovaPlugin {
         targetPath          = targetPath.replace("file://", "");
         String sourcePath   = sourceEntry.substring(0, sourceEntry.lastIndexOf("/")+1);
         String sourceName   = sourceEntry.replace(sourcePath, "");
-        sourceName          = (sourceEntry.lastIndexOf(".")==-1)?sourceName:sourceName.substring(0, sourceName.lastIndexOf("."));
+        sourceName          = (sourceName.lastIndexOf(".")==-1)?sourceName:sourceName.substring(0, sourceName.lastIndexOf("."));
         
         if(sourceEntry.isEmpty() || targetPath.isEmpty() || sourcePath.isEmpty() || sourceName.isEmpty()){
             return null;
